@@ -1,0 +1,85 @@
+// min-width
+$breakpoint_up: (
+  "pc": "screen and (min-width: #{$bp_sp_max_width+1}px)"
+) !default;
+
+// min-width
+$breakpoint_lp: (
+  "lp": "screen and (max-width: #{$bp_lp_max_width+1}px)"
+) !default;
+
+// max-width
+$breakpoint_down: (
+  "sp": "screen and (max-width: #{$bp_sp_max_width}px)"
+) !default;
+
+// max-width mb
+$breakpoint_downmp: (
+  "mb": "screen and (max-width: #{$bp_mb_max_width}px)"
+) !default;
+
+@mixin mq_up($breakpoint) {
+  @media #{map-get($breakpoint_up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq_lp($breakpoint) {
+  @media #{map-get($breakpoint_lp, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq_down($breakpoint) {
+  @media #{map-get($breakpoint_down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq_mb($breakpoint) {
+  @media #{map-get($breakpoint_downmp, $breakpoint)} {
+    @content;
+  }
+}
+
+@function setvw($target) {
+  $vw: (768 * 0.01) * 1px;
+
+  @return ($target / $vw) * 1vw;
+}
+
+@function setvwpc($target) {
+  $vw: (1440 * 0.01) * 1px;
+
+  @return ($target / $vw) * 1vw;
+}
+
+@mixin fs($fontsize: 14, $lineheight: 22, $base: 10) {
+  font-size: $fontsize + px;
+  font-size: ($fontsize / $base) * 1rem;
+  line-height: ceil($lineheight * 1000 / $fontsize) / 1000;
+}
+
+@mixin fs-vw($fontsize: 14, $lineheight: 22, $area-width: 768) {
+  font-size: #{($fontsize / $area-width) * 100}vw;
+  line-height: ceil($lineheight * 1000 / $fontsize) / 1000;
+}
+
+@mixin fs-vwpc($fontsize: 14, $lineheight: 22, $area-width: 1920) {
+  font-size: #{($fontsize / $area-width) * 100}vw;
+  line-height: ceil($lineheight * 1000 / $fontsize) / 1000;
+}
+
+@function cent($value, $container) {
+  @return ($value * 100%) / $container;
+}
+//使用例
+// .foo {
+//   color: blue;
+//   @include mq_up(pc) { // pcより大きい場合
+//     color: yellow;
+//   }
+//   @include mq_down(sm) { // smより小さい場合=sm
+//     color: red;
+//   }
+// }

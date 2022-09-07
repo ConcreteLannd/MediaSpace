@@ -1,0 +1,52 @@
+
+//  break point for _responsive.scss
+$bp_tab_max_width: 960;
+$bp_lp_max_width: 1600;
+$bp_sp_max_width: 960;
+$bp_mb_max_width: 570;
+
+// layout setting
+$pc_min_width: 1080px;
+$pc_max_width: 1080px;
+
+$container: 1080px;
+
+// $pc_top_visual_padding_top: 400px;
+$pc_top_visual_padding_top: 56.25%; // 16:9
+$sp_top_visual_padding_top: 56.25%; // 16:9
+
+$pc_top_visual_min_height: 400px;
+$pc_top_visual_max_height: 675px;
+$sp_top_visual_min_height: 300px;
+$sp_top_visual_max_height: 600px;
+
+$pc_top_content_side_padding: 10px;
+$sp_top_content_side_padding: 3.5%;
+
+$pc_page_content_side_padding: 10px;
+$sp_page_content_side_padding: 3.5%;
+
+$pc_page_sidebar_width: 300px;
+$pc_page_sidebar_margin: 20px;
+
+//  color
+$color_primary: #302823;
+$color_orange: #F29600;
+$color_orangeop: #FBE8B0;
+$color_blue: #50adbb;
+$color_blueop: #C8EBFA;
+$color_red: #d11919;
+$color_pink: #E13E7E;
+$color_pinkop: #FADFE6;
+$color_green: #c1d331;
+$color_green_b: #488b0c;
+$color_error: #ff1f00;
+$color_gray: #e6e6e6;
+$color_purple: #B5B5B6;
+$color_yellow: #fff800;
+
+$color_font_base: #232323;
+
+$color_bg_content: #eee;
+
+$color_bg_topMain: #ededf0;
