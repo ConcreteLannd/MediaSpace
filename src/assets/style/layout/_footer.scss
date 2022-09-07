@@ -1,0 +1,342 @@
+/* FooterArea
+=========================================================================================== */
+
+#FooterArea {
+  position: relative;
+  background-color: #e5e5e5;
+  min-width: 320px;
+}
+
+#FooterArea > .Container,
+#FooterArea > .ContainerFix {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#FooterArea.Fix {
+  min-width: 965px;
+}
+
+#FooterArea.FixWide {
+  min-width: 1275px;
+}
+
+
+/* FooterPageTop
+=========================================================================================== */
+
+#FooterPageTop {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 15px;
+  top:-40px;
+  z-index: 1;
+  background-color: #ff0026;
+  cursor: pointer;
+}
+
+#FooterArea > .ContainerFix #FooterPageTop {
+  right: 0px;
+}
+
+#FooterPageTop::before {
+  content: "";
+  position: absolute;
+  right: 11px;
+  top: 14px;
+  width: 18px;
+  height: 2px;
+  z-index: -1;
+  background-color: #fff;
+}
+
+#FooterPageTop::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: calc((40px - 10px * 1.4142) / 2);
+  width: 13px;
+  height: 13px;
+  z-index: -1;
+  border: transparent;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 319px) {
+  #FooterArea > .Container::before {
+      width: 320px;
+      left: 0;
+      margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #FooterArea > .Container #FooterPageTop {
+      right: 0px;
+  }
+}
+
+
+/* Footer2
+=========================================================================================== */
+
+#Footer2 {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+#SnsButton {
+  line-height: 1;
+}
+
+#SnsButton a {
+  display: block;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  float: left;
+}
+
+#SnsButton img {
+  width: 32px;
+  height: 32px;
+}
+
+#Footer2Menu {
+  text-align: right;
+  margin-left: auto;
+}
+
+#Footer2Menu a {
+  font-size: 83%;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+#Footer2Menu a+a {
+  margin-left: 20px;
+}
+
+#Footer2Menu a:link,
+#Footer2Menu a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#Footer2Menu a:hover,
+#Footer2Menu a:focus,
+#Footer2Menu a:active {
+  color: #b1000e;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .Container #Footer2 {
+      -ms-flex-direction: column;
+      flex-direction: column;
+  }
+
+  .Container #SnsButton {
+      margin-bottom: 10px;
+      padding-top: 5px;
+  }
+
+  .Container #SnsButton a {
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-bottom: 25px;
+  }
+
+  .Container #SnsButton img {
+      width: 45px;
+      height: 45px;
+  }
+
+  .Container #Footer2Menu {
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: start;
+      align-items: flex-start;
+  }
+
+  .Container #Footer2Menu a {
+      margin-left: 0;
+      margin-bottom: 5px;
+  }
+}
+
+
+/* Footer1
+=========================================================================================== */
+
+#Footer1 {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#HitachiTop {
+  margin-bottom: 10px;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+#HitachiTop a {
+  font-size: 100%;
+  font-weight: bold;
+  position: relative;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+#HitachiTop a:link,
+#HitachiTop a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#HitachiTop a:hover,
+#HitachiTop a:focus,
+#HitachiTop a:active {
+  color: #b1000e;
+  text-decoration: underline;
+}
+
+#HitachiTop a+a {
+  margin-left: 30px;
+}
+
+#HitachiTop a+a::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  left: -15px;
+  top: 50%;
+  pointer-events: none;
+  cursor: default;
+  transform: translateY(-50%);
+  background-color: #c2c2c2;
+}
+
+#Copyright {
+  font-size: 65%;
+  line-height: 1.5em;
+  color: #000;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+#Footer1Menu {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#Footer1Menu a {
+  font-size: 67%;
+  display: inline-block
+}
+
+#Footer1Menu a+a {
+  margin-left: 20px;
+}
+
+#Footer1Menu a:link,
+#Footer1Menu a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#Footer1Menu a:hover,
+#Footer1Menu a:focus,
+#Footer1Menu a:active {
+  color: #b1000e;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1274px) {
+  #FooterArea > .ContainerFix.Wide::before {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Container #Footer1 {
+      -ms-flex-direction: column;
+      flex-direction: column;
+  }
+
+  .Container #HitachiTop {
+      width: 100%;
+      -ms-flex-preferred-size:auto;
+      flex-basis: auto;
+      -ms-flex-direction: column;
+      flex-direction: column;
+  }
+
+  .Container #HitachiTop a {
+      width: 100%;
+      display: block;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #666;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+  }
+
+  .Container #HitachiTop a:hover,
+  .Container #HitachiTop a:focus  {
+      background-color: #ccc;
+      color: #000;
+      text-decoration: none;
+  }
+
+
+  .Container #HitachiTop a+a {
+      margin-left: 0;
+  }
+
+  .Container #HitachiTop a+a::before {
+      display: none;
+  }
+
+  .Container #Footer1Menu a {
+      margin-right: 10px;
+  }
+
+  .Container #Footer1Menu a+a {
+      margin-left: 0px;
+  }
+
+  .Container #Copyright {
+      margin-right: 0;
+  }
+}
