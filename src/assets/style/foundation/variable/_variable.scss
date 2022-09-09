@@ -1,9 +1,12 @@
 
 //  break point for _responsive.scss
-$bp_tab_max_width: 960;
 $bp_lp_max_width: 1600;
-$bp_sp_max_width: 960;
-$bp_mb_max_width: 570;
+$bp_pc_min_width: 1140;
+$bp_tab_max_width: 1024;
+$bp_tab_min_width: 960;
+$bp_sp_max_width: 768;
+$bp_mb_max_width: 640;
+$bp_spm_max_width: 375;
 
 // layout setting
 $pc_min_width: 1080px;

@@ -1,11 +1,17 @@
-// min-width
-$breakpoint_up: (
-  "pc": "screen and (min-width: #{$bp_sp_max_width+1}px)"
-) !default;
 
 // min-width
 $breakpoint_lp: (
   "lp": "screen and (max-width: #{$bp_lp_max_width+1}px)"
+) !default;
+
+// min-width
+$breakpoint_up: (
+  "pc": "screen and (max-width: #{$bp_pc_min_width}px)"
+) !default;
+
+// min-width
+$breakpoint_tab: (
+  "tab": "screen and (max-width: #{$bp_tab_max_width}px)"
 ) !default;
 
 // max-width
@@ -16,6 +22,11 @@ $breakpoint_down: (
 // max-width mb
 $breakpoint_downmp: (
   "mb": "screen and (max-width: #{$bp_mb_max_width}px)"
+) !default;
+
+// max-width mb
+$breakpoint_downspm: (
+  "spm": "screen and (max-width: #{$bp_spm_max_width}px)"
 ) !default;
 
 @mixin mq_up($breakpoint) {
@@ -30,6 +41,12 @@ $breakpoint_downmp: (
   }
 }
 
+@mixin mq_tab($breakpoint) {
+  @media #{map-get($breakpoint_tab, $breakpoint)} {
+    @content;
+  }
+}
+
 @mixin mq_down($breakpoint) {
   @media #{map-get($breakpoint_down, $breakpoint)} {
     @content;
@@ -38,6 +55,11 @@ $breakpoint_downmp: (
 
 @mixin mq_mb($breakpoint) {
   @media #{map-get($breakpoint_downmp, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq_spm($breakpoint) {
+  @media #{map-get($breakpoint_downspm, $breakpoint)} {
     @content;
   }
 }

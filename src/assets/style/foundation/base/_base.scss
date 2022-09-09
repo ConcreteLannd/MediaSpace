@@ -1,25 +1,6 @@
 
 html {
   font-size: 62.5%;
-
-  @media screen and (max-width: 1030px) {
-    font-size: calc(100vw / 130);
-  }
-
-  @media screen and (max-width: 960px) {
-    font-size: calc(100vw / 100);
-  }
-
-  @media screen and (max-width: 769px) {
-    font-size: calc(100vw / 70);
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: calc(100vw / 50);
-  }
-  @media screen and (max-width: 410px) {
-    font-size: calc(100vw / 45);
-  }
 }
 
 body {

@@ -36,21 +36,20 @@ Copyright 2021 Hitachi, Ltd.
     margin-right: auto;
     margin-left: auto;
 
-    @include mq_lp(lp) {
+    @include mq_up(pc) {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    @media screen and (max-width: 1025px) and (min-width: 1023px) {
+      padding-right: 15px;
+      padding-left: 15px;
     }
 
     @include mq_down(sp) {
       min-width: auto;
-      padding-right: 25px;
-      padding-left: 25px;
-    }
-
-    @include mq_mb(mb) {
-      min-width: auto;
-      margin-right: 0;
-      margin-left: 0;
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
   }
   .-center {
@@ -168,6 +167,16 @@ Copyright 2021 Hitachi, Ltd.
     display: block;
     position: relative;
     margin-top: -90px;
+    @include mq_up(pc) {
+      @include fs (50, 110);
+    }
+    @include mq_down(sp) {
+      @include fs(36, 122);
+
+    }
+    @include mq_mb(mb) {
+      @include fs(36, 50);
+    }
    }
    .ttl-en {
     @include fs (170, 170);
@@ -175,6 +184,16 @@ Copyright 2021 Hitachi, Ltd.
     letter-spacing: 0.075rem;
     display: block;
     color: #FFD1D4;
+    opacity: 0.3;
+    @include mq_up(pc) {
+      @include fs (140, 140);
+    }
+    @include mq_down(sp) {
+      @include fs(70, 84);
+    }
+    @include mq_spm(spm) {
+      @include fs(60, 74);
+    }
    }
   }
 
@@ -272,16 +291,6 @@ Copyright 2021 Hitachi, Ltd.
 
 /* l-container
 =========================================================================================== */
-
-.l-containerFix {
-    width: 965px;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.l-containerFix.Wide {
-    width: 1275px;
-}
 
 @media screen and (min-width: 768px) {
     .l-container { max-width: 965px; }
@@ -1307,7 +1316,7 @@ body.header2-fix #HeaderArea2.Sticky #HorizontalLocalNavi {
 @media screen and (max-width: 767px) {
     #HeaderArea1 > .l-container #SpMenuBtn {
         display: block;
-        margin-right: -15px;
+        margin-right: -10px;
     }
 }
 
