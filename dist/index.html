@@ -63,6 +63,28 @@
           </button>
         </div>
       </div>
+      <div id="SpMenuModal">
+        <div id="SpMenuModalDialog">
+          <div id="SpMenuModalContent">
+            <div id="SpMenuModalBody">
+              <ul id="SpGlobalNavi">
+                <li class="Current"><a href="/products/menu/seihin.htm"><em>製品・サービス</em></a></li>
+                <li><a href="/products/menu/jirei.htm">システム構築事例</a></li>
+                <li><a href="/jigyou/kaisyatop.htm">会社情報</a></li>
+                <li><a href="/recruit/rec_index.htm">採用情報</a></li>
+              </ul>
+              <ul id="SpSupportNavi">
+                <li>
+                  <a href="/form/inquiry.html?kind=143">
+                    <span class="Icon"><img src="./assets/images/icon_form.png"></span>
+                    <span>お問い合わせ</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="HeaderArea2" class="Sticky">
         <div class="l-container">
           <div id="SiteID">
@@ -96,8 +118,13 @@
                 社内広報を円滑に</p>
             </div>
             <div class="btn-pr">
-              <a href="#" class="inquiries"><img class="rimg" src="./assets/images/btn-inquiries_pc.png" alt="ご相談/お問い合わせ"></a>
-              <a href="#" class="request"><img class="rimg" src="./assets/images/btn-request_pc.png" alt="資料請求"></a>
+              <a href="/form/inquiry.html?kind=143" class="inquiries">ご相談/お問い合わせ
+                <!-- <img class="rimg" src="./assets/images/btn-inquiries_pc.png" alt=""> -->
+              </a>
+              <a href="/form/inquiry.html?kind=143" class="request">
+                資料請求
+                <!-- <img class="rimg" src="./assets/images/btn-request_pc.png" alt="資料請求"> -->
+              </a>
             </div>
           </div>
         </div>
@@ -206,11 +233,9 @@
                 <div class="ctn_bottom-item">
                   <div class="left-item">
                     <h3 class="ttl-features">災害情報（Ｌアラート）</h3>
-                    <p class="des">
-                      ・災害発生時に自動的に災害情報を表示。<br>
-                      ・ディスプレイ設置場所の災害情報表示が可能。<br>
-                      ・災害の状況により、全画面、Ｌ字を自動切換え表示。
-                    </p>
+                    <p class="des">・災害発生時に自動的に災害情報を表示。</p>
+                    <p class="des">・ディスプレイ設置場所の災害情報表示が可能。</p>
+                    <p class="des">・災害の状況により、全画面、Ｌ字を自動切換え表示。</p>
                   </div>
                   <div class="right-item">
                     <img src="./assets/images/features02_02.png" alt="ニュース、天気">
@@ -409,7 +434,7 @@
       </section>
 
 
-      <section class="secttion secttion-contact  wow c-fademoveA">
+      <section class=" section-contact  wow c-fademoveA">
         <div class="l-container">
           <h2 class="sec-head">
             <span class="ttl-en">CONTACT</span>
@@ -466,7 +491,7 @@
 
           <!-- フッタ項目「7.7. フッタ項目」を参照 -->
           <div id="Footer1Menu">
-            <a href="/termsoftext-use/">サイトの class="use"利用条件</a> <!-- 必須らしい -->
+            <a href="/termsoftext-use/">サイトの <span class="use">利用条件</span> </a> <!-- 必須らしい -->
             <a href="/privacy/privacy.htm">個人情報保護に関して</a>
             <a href="/nintei/entry.htm">各種登録・認定</a>
             <a href="/health/index.htm">健康経営への取り組み</a>
@@ -486,6 +511,7 @@
   <script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
   <script src="./assets/js/wow.min.js" ></script>
   <script src="./assets/js/slick.min.js"></script>
+  <script type="text/javascript" src="./assets/js/common.js" ></script>
   <script type="text/javascript" src="./assets/js/main.js" ></script>
 </body>
 

@@ -7,11 +7,12 @@
   position: relative;
   .ctn-mv {
     max-width: 960px;
+    min-width: 960px;
     width: 50vw;
     max-height: 576px;
     background: center/cover no-repeat url("../images/bg_pr.png");
     position: absolute;
-    top: 50%;
+    top: 54.5%;
     left: 0;
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
@@ -24,6 +25,7 @@
       position: initial;
       width: 100%;
       max-width: 100%;
+      min-width: auto;
       max-height: auto;
       background: top/cover no-repeat url("../images/bg_pr-sp.png");
       padding: 30px 10px 40px;
@@ -32,7 +34,7 @@
 
     .pr {
       border: 10px solid #FFFF00;
-      padding: 2.60409999vw 2.60409999vw 0;
+      padding: 1.6041vw 2.60409999vw 0;
       text-align: center;
       color: #fff;
 
@@ -81,8 +83,10 @@
         }
       }
       .des-pr {
-        font-size: 3.4vw;
+        font-size: 3.3vw;
         line-height: 1.67;
+        letter-spacing: 0.8rem;
+        padding-top: 15px;
         @include mq_down(sp) {
           @include fs(30, 50);
         }
@@ -91,11 +95,38 @@
       .btn-pr {
         display: flex;
         justify-content: center;
+        padding: 2vw 0;
+        a {
+          min-width: 375px;
+          padding: 1vw;
+          text-align: center;
+          box-shadow:  0px 2px 9px #00000026;
+          border-radius: 50px;
+          @include fs (30,50);
+          margin: 0 13px;
+          font-weight: bold;
+          @include mq_down(sp) {
+            width: 90%;
+            min-width: auto;
+            margin: 0 auto;
+            display: block;
+            @include fs (18,30);
+          }
+        }
+        .request {
+          background-color: #0475a1;
+          color: #fff;
+          @include mq_down(sp) {
+            margin-top: 15px;
+          }
+        }
+
+        .inquiries {
+          background-color: #d2d2d2;
+        }
         @include mq_down(sp) {
           display: block;
           .request {
-            display: block;
-            margin-top: -40px;
           }
         }
       }
@@ -116,11 +147,24 @@
     background: center/cover no-repeat url("../images/bg_trouble.png");
     position: relative;
     z-index: 2;
-    padding: 130px 0 30px;
+    padding: 97px 0 30px;
 
     @include mq_down(sp) {
-      background: center/cover no-repeat url("../images/bg_trouble-sp.png");
-      padding: 100px 0 75px;
+      background: bottom/cover no-repeat url("../images/bg_trouble-sp.png");
+      padding: 100px 0 125px;
+    }
+  }
+
+  .ttl-en {
+    color: #fff!important;
+    opacity: 1!important;
+    @include mq_down(sp) {
+      color: #FFD1D4!important;
+    }
+  }
+  .ttl-en {
+    @include mq_down(sp) {
+      margin-top: -54px!important;
     }
   }
 
@@ -128,7 +172,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 30px;
+    padding-top: 23px;
     @include mq_down(sp) {
       padding-top: 0;
     }
@@ -136,10 +180,10 @@
     &_item {
       background: #fff;
       min-width: 500px;
-      border-radius: 5px;
+      border-radius: 10px;
       box-shadow:  0px 2px 9px #00000026;
       text-align: center;
-      padding: 32px 30px 23px;
+      padding: 30px 30px 23px;
       margin-top: 50px;
       @include mq_up(pc) {
         min-width: 480px
@@ -167,7 +211,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 17px 0;
+        margin: 28px 0 10px;
         @include mq_down(sp) {
           @include fs (26, 36);
           height: auto;
@@ -185,15 +229,15 @@
 
   .bottom-trouble {
     background: center/cover no-repeat url("../images/bg_solve.png");
-    margin-top: -237px;
-    padding: 293px 0 80px;
+    margin-top: -220px;
+    padding: 293px 0 83px;
     text-align: center;
     color: #fff;
     position: relative;
     @include mq_down(sp) {
-      margin-top: 0;
+      margin-top: -83px;
       padding: 153px 0 80px;
-      background: center/cover no-repeat url("../images/bg_solve-sp.png");
+      background: top/cover no-repeat url("../images/bg_solve-sp.png");
     }
 
     .text-plan {
@@ -205,6 +249,7 @@
       }
     }
     .solve {
+      margin-top: 5px;
       @include fs(44 , 88);
       font-weight: bold;
       text-shadow: 0px 2px 9px #00000026;
@@ -222,7 +267,7 @@ secttion-Features
 ------------------------------------------------------------------------------------------- */
 
 .section-features {
-  padding: 100px 0;
+  padding: 120px 0 147px;
 
   background: center center no-repeat url("../images/bg_features.png");
    background-size: cover;
@@ -240,13 +285,22 @@ secttion-Features
   .ctn-features {
     &_item {
       width: 96.3%;
-      padding-top: 50px;
+      padding-top: 96px;
       padding-bottom: 100px;
       border-bottom: 2px solid #C6C6C6;
+      &:first-child {
+        padding-top: 82px;
+        @include mq_down(sp) {
+          width: 100%;
+          padding-top: 50px;
+        }
+
+      }
       @include mq_down(sp) {
         width: 100%;
         padding-right: 10px;
         padding-bottom: 60px;
+        padding-top: 50px;
       }
 
       &:last-child {
@@ -290,7 +344,7 @@ secttion-Features
 
     .top-item {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       @include mq_down(sp) {
         display: block;
       }
@@ -310,8 +364,10 @@ secttion-Features
       }
 
       .thumb {
+        width: 50%;
         @include mq_down(sp) {
           padding-right: 10px;
+          width: 100%;
         }
         img {
           border-top-right-radius: 17px;
@@ -319,12 +375,14 @@ secttion-Features
         }
       }
       .info-feature {
+        margin-top: 20px;
+        padding-left: 1%;
         @include mq_up(pc) {
           margin-left: 5%;
         }
         @include mq_down(sp) {
           margin-left: 0;
-          padding: 30px 10px 30px 20px;
+          padding: 30px 10px 0px 20px;
         }
       }
 
@@ -343,6 +401,7 @@ secttion-Features
       .des {
         @include fs (24,44);
         font-weight: 400;
+        margin-top: 10px;
         @include mq_up(pc) {
           @include fs (20,40);
         }
@@ -351,7 +410,7 @@ secttion-Features
     }
 
     .bottom-item {
-      padding-top: 15px;
+      padding-top: 20px;
       @include mq_down(sp) {
         padding: 0 10px 0 20px;
         display: block;
@@ -359,9 +418,12 @@ secttion-Features
       .ttl-features {
         position: relative;
         @include fs(34,34);
-        padding-bottom: 10px;
+        padding-bottom: 13px;
         padding: 0 0 0 50px;
         border-bottom: 2px solid #C6C6C6;
+        margin-top: 52px;
+        font-weight: bold;
+        letter-spacing: 0.4rem;
         &::before {
           content: '';
           width: 30px;
@@ -389,17 +451,24 @@ secttion-Features
         @include mq_down(sp) {
           padding: 0 0 10px 30px;
           @include fs(22,32);
+          margin-top: 30px;
         }
       }
 
       .img-step {
-        padding-top: 50px;
+        padding-top: 40px;
       }
       .ctn_bottom-item {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-top: 55px;
+        margin-top: 53px;
+        &:last-child {
+          margin-top: 52px;
+          .ttl-features {
+            margin-top: 20px;
+          }
+        }
         @include mq_down(sp) {
           margin-top: 30px;
           display: block;
@@ -418,11 +487,21 @@ secttion-Features
             margin-top: 20px;
           }
         }
+        .ttl-features {
+          margin-top: 67px;
+          @include mq_down(sp) {
+            margin-top: 30px;
+          }
+        }
       }
       .des {
-        margin-top: 30px;
+        margin-top: 20px;
+        @include fs(25,37.5);
+        margin-left: -6px;
+        letter-spacing: 0;
         @include mq_down(sp) {
           margin-top: 10px;
+          @include fs(18,30);
         }
       }
     }
@@ -437,7 +516,7 @@ CASE STUDY
 
 ------------------------------------------------------------------------------------------- */
 .case-study {
-  padding: 100px 0 145px;
+  padding: 100px 0 113px;
   background: center/cover no-repeat url("../images/bg_case-study.png");
   background-size: cover;
   @include mq_down(sp) {
@@ -453,9 +532,9 @@ CASE STUDY
     overflow: hidden;
   }
   .slider {
-    margin-right: -100px;
+    margin-right: -120px;
     padding-bottom: 115px;
-    padding-top: 70px;
+    padding-top: 50px;
     @include mq_up(pc) {
       margin-right: 0;
     }
@@ -510,8 +589,8 @@ CASE STUDY
   }
   .slider-item {
     background: #fff;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 65px;
+    border-bottom-right-radius: 65px;
     display: block;
     margin-right: 60px;
 
@@ -526,12 +605,12 @@ CASE STUDY
     .thumb-slider {
     }
     .ctn-slider {
-      padding: 25px 20px 50px;
+      padding: 24px 20px 50px 20px;
     }
     .category {
       span {
         display: inline-block;
-        padding: 0px 7px;
+        padding: 0px 13px;
         background: center/cover no-repeat url("../images/bg_category.png");
         background-size: cover;
         color: #fff;
@@ -544,10 +623,12 @@ CASE STUDY
       .ttl-slider {
         @include fs(22,26);
         color: #CD1C24;
-        letter-spacing: 0.05rem;
+        letter-spacing: -0.05rem;
         display: flex;
         align-items: center;
         min-height: 40px;
+        font-weight: bold;
+        margin-top: 9px;
         @include mq_down(sp) {
           @include fs(20,24);
         }
@@ -570,7 +651,7 @@ CASE STUDY
       }
     }
     .des-slider {
-      margin-top: 20px;
+      margin-top: 11px;
       @include fs(16,26);
       letter-spacing: 0.05rem;
       height: 77px;
@@ -584,7 +665,7 @@ CASE STUDY
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-top: 10px;
+      margin-top: 13px;
       letter-spacing: 0.05rem;
       .use {
         background: #B1000E;
@@ -614,38 +695,45 @@ CASE STUDY
 
 /* ----------------------------------------------------------------------------------------
 
-secttion-contact
+section-contact
 
 ------------------------------------------------------------------------------------------- */
-.secttion-contact h2.sec-head {
+.section-contact {
+  padding: 110px 0 160px;
+}
+.section-contact h2.sec-head {
   margin-bottom: 0;
 }
 
-.secttion-contact .contact-container {
-  margin-top: 5.3125em;
+.section-contact .contact-container {
+  margin-top: 5.2em;
 }
 
-.secttion-contact .contact-container + .-text {
-  margin: 30px 0 40px;
+.section-contact .contact-container + .-text {
+  margin: 32px 0 50px;
 }
 
-.secttion-contact .contact-container__item {
+.section-contact .contact-container__item {
   width: 21.3483146067%;
 }
 
-.secttion-contact .contact-container__item .-text {
+.section-contact .contact-container__item .-text {
   height: 72px;
   font-size: 1.125em;
 }
 
-.secttion-contact .contact-container__item .-image {
-  width: 98%;
-  max-width: 150px;
+.section-contact .contact-container__item .-image {
+  width: 100%;
+  max-width: 175px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 4px;
 }
 
 @media screen and (max-width: 767px) {
+  .section-contact {
+    padding: 50px 0 80px;
+  }
   .button.-button-01 {
     width: 66.6666666667vw;
     max-width: 100%;
@@ -667,23 +755,23 @@ secttion-contact
 	right: 0.875em;
   }
 
-  .secttion-contact .contact-container + .-text {
+  .section-contact .contact-container + .-text {
     margin: 0 0 8.6666666667vw;
   }
-  .secttion-contact .contact-container {
+  .section-contact .contact-container {
     margin: 10.6666666667vw 2.2666666667vw 13.3333333333vw;
   }
-  .secttion-contact .contact-container__item {
+  .section-contact .contact-container__item {
     width: 50%;
   }
-  .secttion-contact .contact-container__item:nth-child(n+3) {
+  .section-contact .contact-container__item:nth-child(n+3) {
     margin-top: 5.6vw;
   }
-  .secttion-contact .contact-container__item .-text {
+  .section-contact .contact-container__item .-text {
     height: 9.6vw;
     font-size: 3.2vw;
   }
-  .secttion-contact .contact-container__item .-image {
+  .section-contact .contact-container__item .-image {
     width: 28vw;
     max-width: none;
   }
