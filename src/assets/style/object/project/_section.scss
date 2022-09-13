@@ -7,126 +7,52 @@
   position: relative;
   .ctn-mv {
     max-width: 960px;
-    min-width: 960px;
     width: 50vw;
     max-height: 576px;
-    background: center/cover no-repeat url("../images/bg_pr.png");
     position: absolute;
-    top: 54.5%;
+    top: 22%;
     left: 0;
-    -webkit-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    padding: 1.7709vw 3.125vw 1.7709vw 2.086vw;
 
     @include mq_down(sp) {
-      position: initial;
+      position: inherit;
       width: 100%;
-      max-width: 100%;
-      min-width: auto;
-      max-height: auto;
-      background: top/cover no-repeat url("../images/bg_pr-sp.png");
-      padding: 30px 10px 40px;
-      transform: inherit!important;
+      max-height: 100%;
+      img {
+        width: 100%;
+      }
     }
 
-    .pr {
-      border: 10px solid #FFFF00;
-      padding: 1.6041vw 2.60409999vw 0;
-      text-align: center;
-      color: #fff;
-
+    .banner-fv {
+      position: relative;
       @include mq_down(sp) {
-        border: 5px solid #FFFF00;
-        padding: 10px 5px 0;
+        margin-top: -50px;
       }
-
-      .ttl-pr {
-        p {
-          font-size: 1.771vw;
-          line-height: 2;
-          display: inline-block;
-          position: relative;
-          width: 90%;
-          max-width: 640px;
-          margin: 0 auto;
-          border-left: 2px solid #fff;
-          border-right: 2px solid #fff;
+      .pr {
+        .inquiries {
+          position: absolute;
+          bottom: 13%;
+          left: 10%;
+          width: 19vw;
+          height: 5vw;
           @include mq_down(sp) {
-            width: 100%;
-            @include fs(18, 36);
-          }
-
-          &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 10px;
-            height: 100%;
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-            content: " ";
-          }
-
-          &::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 10px;
-            height: 100%;
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-            content: " ";
-          }
-        }
-      }
-      .des-pr {
-        font-size: 3.3vw;
-        line-height: 1.67;
-        letter-spacing: 0.8rem;
-        padding-top: 15px;
-        @include mq_down(sp) {
-          @include fs(30, 50);
-        }
-      }
-
-      .btn-pr {
-        display: flex;
-        justify-content: center;
-        padding: 2vw 0;
-        a {
-          min-width: 375px;
-          padding: 1vw;
-          text-align: center;
-          box-shadow:  0px 2px 9px #00000026;
-          border-radius: 50px;
-          @include fs (30,50);
-          margin: 0 13px;
-          font-weight: bold;
-          @include mq_down(sp) {
+            bottom: 30%;
+            left: 5%;
             width: 90%;
-            min-width: auto;
-            margin: 0 auto;
-            display: block;
-            @include fs (18,30);
+            height: 13vw;
           }
+
         }
         .request {
-          background-color: #0475a1;
-          color: #fff;
+          position: absolute;
+          bottom: 13%;
+          right: 10%;
+          width: 19vw;
+          height: 5vw;
           @include mq_down(sp) {
-            margin-top: 15px;
-          }
-        }
-
-        .inquiries {
-          background-color: #d2d2d2;
-        }
-        @include mq_down(sp) {
-          display: block;
-          .request {
+            bottom: 15%;
+            left: 5%;
+            width: 90%;
+            height: 13vw;
           }
         }
       }
@@ -158,13 +84,11 @@
   .ttl-en {
     color: #fff!important;
     opacity: 1!important;
-    @include mq_down(sp) {
-      color: #FFD1D4!important;
-    }
   }
-  .ttl-en {
+
+  .ttl-ja {
     @include mq_down(sp) {
-      margin-top: -54px!important;
+      margin-top: -45px!important;
     }
   }
 
@@ -174,7 +98,7 @@
     justify-content: space-around;
     padding-top: 23px;
     @include mq_down(sp) {
-      padding-top: 0;
+      padding: 33px 10px 0;
     }
 
     &_item {
@@ -190,7 +114,7 @@
       }
       @include mq_down(sp) {
         width: 100%;
-        padding: 20px;
+        padding: 20px 20px 15px;
         margin-top: 30px;
         min-width: 100%;
       }
@@ -198,7 +122,7 @@
       .trouble-number {
         img {
            @include mq_down(sp) {
-            width: 63px;
+            width: 53px;
           }
         }
       }
@@ -206,7 +130,7 @@
       .trouble {
         @include fs (40, 64);
         font-weight: bold;
-        letter-spacing: 0.075rem;
+        letter-spacing: 0.3rem;
         height: 169px;
         display: flex;
         justify-content: center;
@@ -215,12 +139,16 @@
         @include mq_down(sp) {
           @include fs (26, 36);
           height: auto;
+          margin-top: 35px;
         }
       }
       .thumb-trouble {
+        @include mq_down(sp) {
+          margin-top: 33px;
+        }
         img {
           @include mq_down(sp) {
-            width: 50%;
+            width: 35%;
           }
         }
       }
@@ -236,7 +164,7 @@
     position: relative;
     @include mq_down(sp) {
       margin-top: -83px;
-      padding: 153px 0 80px;
+      padding: 153px 0 107px;
       background: top/cover no-repeat url("../images/bg_solve-sp.png");
     }
 
@@ -244,6 +172,7 @@
       @include fs(60 , 100);
       font-weight: bold;
       text-shadow: 0px 2px 9px #00000026;
+      letter-spacing: 0.9rem;
       @include mq_down(sp) {
         @include fs(35 , 60);
       }
@@ -253,8 +182,10 @@
       @include fs(44 , 88);
       font-weight: bold;
       text-shadow: 0px 2px 9px #00000026;
+      letter-spacing: 0.5rem;
       @include mq_down(sp) {
-        @include fs(24 , 150);
+        @include fs(24 , 48);
+        margin-top: 22px;
       }
     }
   }
@@ -272,7 +203,7 @@ secttion-Features
   background: center center no-repeat url("../images/bg_features.png");
    background-size: cover;
     @include mq_down(sp) {
-      padding-bottom: 90px;
+      padding: 90px 0 90px;
     }
 
    .l-container {
@@ -292,8 +223,13 @@ secttion-Features
         padding-top: 82px;
         @include mq_down(sp) {
           width: 100%;
-          padding-top: 50px;
+          padding-top: 56px;
+
+          .bottom-item {
+            padding-left: 28px;
+          }
         }
+
 
       }
       @include mq_down(sp) {
@@ -316,7 +252,7 @@ secttion-Features
          padding-left: 10px;
 
          .bottom-item {
-          padding-left: 10px;
+          padding-left: 17px;
           padding-right: 20px;
          }
         }
@@ -330,13 +266,25 @@ secttion-Features
             }
             img {
               border: none;
-              border-top-left-radius: 17px;
-              border-bottom-left-radius: 17px;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+              @include mq_down(sp) {
+
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
+              }
             }
           }
 
           .info-feature {
             order: 1;
+            @include mq_down(sp) {
+              padding-left: 7px;
+              .ttl {
+                padding-left: 10px;
+                letter-spacing: 0;
+              }
+            }
           }
         }
       }
@@ -365,6 +313,9 @@ secttion-Features
 
       .thumb {
         width: 50%;
+        img {
+          box-shadow: 0px 4px 15px #00000054;
+        }
         @include mq_down(sp) {
           padding-right: 10px;
           width: 100%;
@@ -382,7 +333,7 @@ secttion-Features
         }
         @include mq_down(sp) {
           margin-left: 0;
-          padding: 30px 10px 0px 20px;
+          padding: 12px 10px 0px 20px;
         }
       }
 
@@ -449,14 +400,14 @@ secttion-Features
         }
 
         @include mq_down(sp) {
-          padding: 0 0 10px 30px;
+          padding: 0 0 15px 30px;
           @include fs(22,32);
-          margin-top: 30px;
+          margin-top: 10px;
         }
       }
 
       .img-step {
-        padding-top: 40px;
+        padding-top: 30px;
       }
       .ctn_bottom-item {
         display: flex;
@@ -464,7 +415,7 @@ secttion-Features
         align-items: flex-start;
         margin-top: 53px;
         &:last-child {
-          margin-top: 52px;
+          margin-top: 33px;
           .ttl-features {
             margin-top: 20px;
           }
@@ -484,7 +435,7 @@ secttion-Features
           text-align: center;
           @include mq_down(sp) {
             width: 100%;
-            margin-top: 20px;
+            margin-top: 25px;
           }
         }
         .ttl-features {
@@ -500,8 +451,15 @@ secttion-Features
         margin-left: -6px;
         letter-spacing: 0;
         @include mq_down(sp) {
-          margin-top: 10px;
+          margin-top: 14px;
           @include fs(18,30);
+        }
+      }
+      .img-features03 {
+        img {
+          width: 100%;
+          max-width: 856px;
+          margin: 0 auto;
         }
       }
     }
@@ -520,27 +478,43 @@ CASE STUDY
   background: center/cover no-repeat url("../images/bg_case-study.png");
   background-size: cover;
   @include mq_down(sp) {
-    padding: 60px 0 60px;
+    padding: 80px 0 45px;
+    background: top/cover no-repeat url("../images/bg_case-study-sp.png");
   }
   .ttl-en {
     color: #FFFFFF!important;
+    @include mq_down(sp) {
+      line-height: 1!important;
+    }
   }
   .ttl-ja {
     color: #FFFFFF;
+    @include mq_down(sp) {
+      margin-top: -87px!important;
+    }
   }
-  .l-container {
-    overflow: hidden;
-  }
+  // .l-container {
+  //   overflow: hidden;
+  // }
   .slider {
-    margin-right: -120px;
     padding-bottom: 115px;
+    margin-right: -520px;
     padding-top: 50px;
     @include mq_up(pc) {
-      margin-right: 0;
+      padding-top: 110px;
+    }
+
+    .slick-slide img {
+      @include mq_down(sp) {
+        box-shadow: 0px 4px 15px #00000054;
+        border-bottom-left-radius: 100px;
+      }
     }
 
     @include mq_down(sp) {
       padding-bottom: 100px;
+      padding-top: 87px;
+      margin-right: 20px;
     }
     .slick-prev {
       position: absolute;
@@ -556,6 +530,8 @@ CASE STUDY
       @include mq_down(sp) {
         width: 60px;
         height: 60px;
+        left: 10px;
+        bottom: -25px;
       }
     }
     .slick-next {
@@ -573,11 +549,15 @@ CASE STUDY
         width: 60px;
         height: 60px;
         left: auto;
-        right: 0;
+        right: 10px;
+        bottom: -25px;
       }
     }
     .slick-dots {
-      bottom: 70px;
+      bottom: 100px;
+      @include mq_down(sp) {
+        bottom: 75px;
+      }
       li {
         margin-left: 3px;
         margin-right: 3px;
@@ -605,7 +585,10 @@ CASE STUDY
     .thumb-slider {
     }
     .ctn-slider {
-      padding: 24px 20px 50px 20px;
+      padding: 22px 20px 50px 20px;
+      @include mq_down(sp) {
+        padding-bottom: 45px;
+      }
     }
     .category {
       span {
@@ -631,6 +614,7 @@ CASE STUDY
         margin-top: 9px;
         @include mq_down(sp) {
           @include fs(20,24);
+          margin-top: 7px;
         }
       }
       .sub_ttl-slider {
@@ -653,11 +637,11 @@ CASE STUDY
     .des-slider {
       margin-top: 11px;
       @include fs(16,26);
-      letter-spacing: 0.05rem;
+      letter-spacing: -0.05rem;
       height: 77px;
       @include mq_down(sp) {
         height: auto;
-        margin-top: 0;
+        margin-top: 8px;
         @include fs(15,24);
       }
     }
@@ -667,6 +651,9 @@ CASE STUDY
       align-items: flex-start;
       margin-top: 13px;
       letter-spacing: 0.05rem;
+      @include mq_down(sp) {
+        margin-top: 10px;
+      }
       .use {
         background: #B1000E;
         display: inline-block;
@@ -679,12 +666,16 @@ CASE STUDY
         max-width: 66px;
         @include mq_down(sp) {
           @include fs(15,24);
+          padding: 0px 9px 0px 9px;
+          width: 23%;
+          text-align: center
         }
       }
       .text {
         @include fs(16,20);
         display: inline-block;
         width: 70%;
+        font-weight: bold;
         @include mq_down(sp) {
           @include fs(15,24);
         }
@@ -699,18 +690,19 @@ section-contact
 
 ------------------------------------------------------------------------------------------- */
 .section-contact {
-  padding: 110px 0 160px;
+  padding: 110px 0 163px;
 }
 .section-contact h2.sec-head {
   margin-bottom: 0;
 }
 
 .section-contact .contact-container {
-  margin-top: 5.2em;
+  margin-top: 5.4em;
 }
 
 .section-contact .contact-container + .-text {
   margin: 32px 0 50px;
+  @include fs(17,29);
 }
 
 .section-contact .contact-container__item {
@@ -719,7 +711,7 @@ section-contact
 
 .section-contact .contact-container__item .-text {
   height: 72px;
-  font-size: 1.125em;
+  @include fs (22,34);
 }
 
 .section-contact .contact-container__item .-image {
@@ -732,7 +724,7 @@ section-contact
 
 @media screen and (max-width: 767px) {
   .section-contact {
-    padding: 50px 0 80px;
+    padding: 72px 0 80px;
   }
   .button.-button-01 {
     width: 66.6666666667vw;

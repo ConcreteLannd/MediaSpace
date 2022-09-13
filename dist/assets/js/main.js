@@ -1,7 +1,9 @@
 (function ($) {
   $('.slider').slick({
     centerMode: false,
-    slidesToShow: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
     arrows: true,
     padding: 0,
     lop: false,

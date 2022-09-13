@@ -16,7 +16,7 @@ Copyright 2021 Hitachi, Ltd.
 
 /* Contents
 =========================================================================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
 #Contents {
     padding-bottom: 65px;
 }
@@ -24,6 +24,7 @@ Copyright 2021 Hitachi, Ltd.
 
 /* wrapper */
 .l-wrapper {
+  overflow: hidden;
   a:hover {
     outline: none;
     // opacity: 0.7;
@@ -123,8 +124,7 @@ Copyright 2021 Hitachi, Ltd.
 
   .button.-button-01 {
     width: 100%;
-    height: 90px;
-    border: 4px solid #fff;
+    height: 85px;
   }
 
   .button.-button-01 .button-inner {
@@ -161,7 +161,7 @@ Copyright 2021 Hitachi, Ltd.
    .ttl-ja {
     @include fs (65, 105);
     font-weight: bold;
-    letter-spacing: 0.25rem;
+    letter-spacing: 1rem;
     display: block;
     position: relative;
     margin-top: -94px;
@@ -170,7 +170,7 @@ Copyright 2021 Hitachi, Ltd.
     }
     @include mq_down(sp) {
       @include fs(36, 122);
-
+      margin-top: -55px;
     }
     @include mq_mb(mb) {
       @include fs(36, 50);
@@ -178,20 +178,22 @@ Copyright 2021 Hitachi, Ltd.
    }
    .ttl-en {
     @include fs (170, 170);
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 0.075rem;
     display: block;
     color: #FFD1D4;
     opacity: 0.3;
+    font-family: 'Barlow', sans-serif;
     @include mq_up(pc) {
       @include fs (140, 140);
     }
     @include mq_down(sp) {
       @include fs(70, 84);
+      opacity: 0.7;
     }
-    @include mq_spm(spm) {
-      @include fs(60, 74);
-    }
+    // @include mq_spm(spm) {
+    //   @include fs(60, 74);
+    // }
    }
   }
 
@@ -247,12 +249,6 @@ Copyright 2021 Hitachi, Ltd.
 
     .-pc {
       display: none;
-    }
-
-    h2.sec-head {
-      font-size: 5.3333333333vw;
-      margin: 0 0 5.47vw;
-      padding: 2.67vw 5.47vw 0;
     }
 
     h2.sec-head {
@@ -1817,7 +1813,7 @@ body.menu-open #SpMenuModal {
 #FooterArea > .l-container,
 #FooterArea > .l-containerFix {
     position: relative;
-    padding-top: 20px;
+    padding-top: 23px;
     padding-bottom: 10px;
 }
 
@@ -1926,7 +1922,8 @@ body.menu-open #SpMenuModal {
 }
 
 #Footer2Menu a {
-    font-size: 83%;
+    @include fs (16, 27);
+    letter-spacing: 0;
     margin-bottom: 16px;
     display: inline-block;
 }
@@ -2005,7 +2002,7 @@ body.menu-open #SpMenuModal {
 }
 
 #HitachiTop {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     display: -ms-flexbox;
@@ -2015,11 +2012,12 @@ body.menu-open #SpMenuModal {
 }
 
 #HitachiTop a {
-    font-size: 100%;
-    font-weight: bold;
-    position: relative;
-    -webkit-transition: background-color .2s ease;
-    transition: background-color .2s ease;
+  @include fs(18,30);
+  letter-spacing: 1px;
+  font-weight: bold;
+  position: relative;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
 }
 
 #HitachiTop a:link,
@@ -2053,7 +2051,8 @@ body.menu-open #SpMenuModal {
 }
 
 #Copyright {
-    font-size: 65%;
+    @include fs(12,18);
+    letter-spacing: 0.12rem;
     line-height: 1.5em;
     color: #000;
     margin-right: auto;
@@ -2066,7 +2065,7 @@ body.menu-open #SpMenuModal {
 }
 
 #Footer1Menu a {
-    font-size: 67%;
+    @include fs(11,17);
     display: inline-block
 }
 
