@@ -76,8 +76,8 @@
     padding: 97px 0 30px;
 
     @include mq_down(sp) {
-      background: bottom/cover no-repeat url("../images/bg_trouble-sp.png");
-      padding: 100px 0 125px;
+      background: #f5f5f5;
+      padding: 100px 0 72px;
     }
   }
 
@@ -163,9 +163,10 @@
     color: #fff;
     position: relative;
     @include mq_down(sp) {
-      margin-top: -83px;
-      padding: 153px 0 107px;
+      margin-top: 0;
+      padding: 145px 0 107px;
       background: top/cover no-repeat url("../images/bg_solve-sp.png");
+      background-color: #f5f5f5;
     }
 
     .text-plan {
@@ -175,6 +176,7 @@
       letter-spacing: 0.9rem;
       @include mq_down(sp) {
         @include fs(35 , 60);
+        letter-spacing: 0.3rem;
       }
     }
     .solve {
@@ -268,6 +270,8 @@ secttion-Features
               border: none;
               border-top-right-radius: 0;
               border-bottom-right-radius: 0;
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
               @include mq_down(sp) {
 
               border-top-left-radius: 20px;
@@ -415,7 +419,7 @@ secttion-Features
         align-items: flex-start;
         margin-top: 53px;
         &:last-child {
-          margin-top: 33px;
+          margin-top: 53px;
           .ttl-features {
             margin-top: 20px;
           }
@@ -447,9 +451,9 @@ secttion-Features
       }
       .des {
         margin-top: 20px;
-        @include fs(25,37.5);
+        @include fs(24,44);
         margin-left: -6px;
-        letter-spacing: 0;
+        letter-spacing: 0.18rem;
         @include mq_down(sp) {
           margin-top: 14px;
           @include fs(18,30);
@@ -484,13 +488,13 @@ CASE STUDY
   .ttl-en {
     color: #FFFFFF!important;
     @include mq_down(sp) {
-      line-height: 1!important;
+      line-height: 0.9!important;
     }
   }
   .ttl-ja {
     color: #FFFFFF;
     @include mq_down(sp) {
-      margin-top: -87px!important;
+      margin-top: -90px!important;
     }
   }
   // .l-container {
@@ -513,8 +517,8 @@ CASE STUDY
 
     @include mq_down(sp) {
       padding-bottom: 100px;
-      padding-top: 87px;
-      margin-right: 20px;
+      padding-top: 93px;
+      margin-right: 0;
     }
     .slick-prev {
       position: absolute;
@@ -579,15 +583,19 @@ CASE STUDY
     }
 
     @include mq_down(sp) {
-      margin: 0 10px;
+      margin: 0 20px;
     }
 
     .thumb-slider {
+      img {
+        border-bottom-left-radius: 100px;
+        box-shadow: 0px 4px 15px #00000054;
+      }
     }
     .ctn-slider {
-      padding: 22px 20px 50px 20px;
+      padding: 22px 20px 30px 20px;
       @include mq_down(sp) {
-        padding-bottom: 45px;
+        padding-bottom: 25px;
       }
     }
     .category {
@@ -674,10 +682,11 @@ CASE STUDY
       .text {
         @include fs(16,20);
         display: inline-block;
-        width: 70%;
+        width: 75%;
         font-weight: bold;
         @include mq_down(sp) {
-          @include fs(15,24);
+          @include fs(15,18);
+          width: 78%;
         }
       }
     }

@@ -189,7 +189,7 @@ Copyright 2021 Hitachi, Ltd.
     }
     @include mq_down(sp) {
       @include fs(70, 84);
-      opacity: 0.7;
+      opacity: 0.5;
     }
     // @include mq_spm(spm) {
     //   @include fs(60, 74);

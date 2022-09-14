@@ -389,7 +389,7 @@ Copyright 2021 Hitachi, Ltd.
     font-size: 70px;
     font-size: 7rem;
     line-height: 1.2;
-    opacity: 0.7;
+    opacity: 0.5;
   }
 }
 
@@ -3403,8 +3403,8 @@ body.menu-open #SpMenuModal {
 
 @media screen and (max-width: 768px) {
   .section-trouble .top-trouble {
-    padding: 100px 0 125px;
-    background: bottom/cover no-repeat url("../images/bg_trouble-sp.png");
+    padding: 100px 0 72px;
+    background: #f5f5f5;
   }
 }
 
@@ -3509,9 +3509,10 @@ body.menu-open #SpMenuModal {
 
 @media screen and (max-width: 768px) {
   .section-trouble .bottom-trouble {
-    margin-top: -83px;
-    padding: 153px 0 107px;
+    margin-top: 0;
+    padding: 145px 0 107px;
     background: top/cover no-repeat url("../images/bg_solve-sp.png");
+    background-color: #f5f5f5;
   }
 }
 
@@ -3528,6 +3529,7 @@ body.menu-open #SpMenuModal {
   .section-trouble .bottom-trouble .text-plan {
     font-size: 35px;
     font-size: 3.5rem;
+    letter-spacing: 0.3rem;
     line-height: 1.715;
   }
 }
@@ -3644,7 +3646,9 @@ secttion-Features
 .section-features .ctn-features_item:nth-child(2) .top-item .thumb img {
   border: none;
   border-top-right-radius: 0;
+  border-top-left-radius: 20px;
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3858,7 +3862,7 @@ secttion-Features
 }
 
 .section-features .ctn-features .bottom-item .ctn_bottom-item:last-child {
-  margin-top: 33px;
+  margin-top: 53px;
 }
 
 .section-features .ctn-features .bottom-item .ctn_bottom-item:last-child .ttl-features {
@@ -3907,10 +3911,10 @@ secttion-Features
 .section-features .ctn-features .bottom-item .des {
   margin-top: 20px;
   margin-left: -6px;
-  font-size: 25px;
-  font-size: 2.5rem;
-  letter-spacing: 0;
-  line-height: 1.5;
+  font-size: 24px;
+  font-size: 2.4rem;
+  letter-spacing: 0.18rem;
+  line-height: 1.834;
 }
 
 @media screen and (max-width: 768px) {
@@ -3952,7 +3956,7 @@ CASE STUDY
 
 @media screen and (max-width: 768px) {
   .case-study .ttl-en {
-    line-height: 1 !important;
+    line-height: 0.9 !important;
   }
 }
 
@@ -3962,7 +3966,7 @@ CASE STUDY
 
 @media screen and (max-width: 768px) {
   .case-study .ttl-ja {
-    margin-top: -87px !important;
+    margin-top: -90px !important;
   }
 }
 
@@ -3987,8 +3991,8 @@ CASE STUDY
 
 @media screen and (max-width: 768px) {
   .case-study .slider {
-    margin-right: 20px;
-    padding-top: 87px;
+    margin-right: 0;
+    padding-top: 93px;
     padding-bottom: 100px;
   }
 }
@@ -4073,17 +4077,22 @@ CASE STUDY
 
 @media screen and (max-width: 768px) {
   .case-study .slider-item {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 }
 
+.case-study .slider-item .thumb-slider img {
+  border-bottom-left-radius: 100px;
+  box-shadow: 0px 4px 15px #00000054;
+}
+
 .case-study .slider-item .ctn-slider {
-  padding: 22px 20px 50px 20px;
+  padding: 22px 20px 30px 20px;
 }
 
 @media screen and (max-width: 768px) {
   .case-study .slider-item .ctn-slider {
-    padding-bottom: 45px;
+    padding-bottom: 25px;
   }
 }
 
@@ -4217,7 +4226,7 @@ CASE STUDY
 
 .case-study .slider-item .text-use .text {
   display: inline-block;
-  width: 70%;
+  width: 75%;
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: bold;
@@ -4226,9 +4235,10 @@ CASE STUDY
 
 @media screen and (max-width: 768px) {
   .case-study .slider-item .text-use .text {
+    width: 78%;
     font-size: 15px;
     font-size: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.2;
   }
 }
 
