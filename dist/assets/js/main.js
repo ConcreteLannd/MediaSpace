@@ -1,34 +1,67 @@
 (function ($) {
-  $('.slider').slick({
-    centerMode: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: true,
-    padding: 0,
-    lop: false,
-    centerPadding: '60px',
-    prevArrow:"<button type='button' class='slick-prev pull-left'><img src='./assets/images/arrow-left.png' alt='left'></button>",
-    nextArrow:"<button type='button' class='slick-next pull-right'><img src='./assets/images/arrow-right.png' alt='right'></button>",
-    responsive: [
-      {
-        breakpoint: 1080,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          slidesToShow: 2
-        }
+  // $('.slider').slick({
+  var swiper = new Swiper(".slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+    loopFillGroupWithBlank: true,
+    breakpoints: {
+      415: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: false,
-          slidesToShow: 1,
-          dots: true,
-        }
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        cssMode: true,
+      },
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1600: {
+        slidesPerView: 4,
+        spaceBetween: 60,
       }
-    ]
+    },
+    // centerMode: false,
+    // slidesToShow: 4,
+    // slidesToScroll: 2,
+    // infinite: true,
+    // arrows: true,
+    // padding: 0,
+    // lop: false,
+    // centerPadding: '60px',
+    // prevArrow:"<button type='button' class='slick-prev pull-left'><img src='./assets/images/arrow-left.png' alt='left'></button>",
+    // nextArrow:"<button type='button' class='slick-next pull-right'><img src='./assets/images/arrow-right.png' alt='right'></button>",
+    // responsive: [
+    //   {
+    //     breakpoint: 1080,
+    //     settings: {
+    //       arrows: true,
+    //       centerMode: true,
+    //       slidesToShow: 2
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       arrows: true,
+    //       centerMode: false,
+    //       slidesToShow: 1,
+    //       dots: true,
+    //     }
+    //   }
+    // ]
   });
 
 })(jQuery)
